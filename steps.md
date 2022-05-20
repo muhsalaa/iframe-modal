@@ -54,7 +54,7 @@
 ```
 
 ## 6. Pre-commit using husky
-- run command `npx husky-init && yarn` to add config and install dependencies
-- setup pre commit script `npx husky set .husky/pre-commit "yarn lint:fix"`
-
-eca4da413676ec848c86a468714f289e7894ffc9
+- install dependencies `yarn add -D husky lint-staged pretty-quick`
+- add prepare script to install husky in package.json `"prepare": "husky install"`
+- run installer script `yarn prepare`
+- create a pre commit hooks `yarn husky add .husky/pre-commit "yarn lint:fix"`
