@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.ts",
-    "lint:fix": "eslint **/*.ts --fix",
+    "lint:fix": "lint-staged",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix"
   },
   "repository": {
     "type": "git",
