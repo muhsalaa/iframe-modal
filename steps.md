@@ -53,8 +53,20 @@
 ]
 ```
 
-## 6. Pre-commit using husky
+## 6. Setup pre-commit using husky, lint-staged and pretty-quick
 - install dependencies `yarn add -D husky lint-staged pretty-quick`
 - add prepare script to install husky in package.json `"prepare": "husky install"`
 - run installer script `yarn prepare`
+- add lint-staged config 
+```json
+"lint-staged": {
+  "*.ts": [
+    "eslint --fix",
+    "pretty-quick --staged"
+  ]
+},
+```
+- edit `lint:fix` to `"lint:fix": "lint-staged"`
 - create a pre commit hooks `yarn husky add .husky/pre-commit "yarn lint:fix"`
+- now every time you do a commit, it will fix style based on eslint and prettier config
+  - like string + number will be fixed by eslint to use literals but prettier dont care
