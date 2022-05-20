@@ -4,7 +4,12 @@
   "description": "A simple module to show iframe modal in your website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.ts",
+    "lint:fix": "eslint **/*.ts --fix",
+    "prettier-fix": "prettier --write **/*.ts",
+    "cleanup": "yarn lint:fix && yarn prettier-fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,7 +31,11 @@
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.2",
-    "typescript": "^4.6.4"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "husky": "^8.0.0"
   }
 }
