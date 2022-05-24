@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 
-const dist = 'disto';
+const dist = 'dist';
 
 export default {
   input: 'src/index.ts',
