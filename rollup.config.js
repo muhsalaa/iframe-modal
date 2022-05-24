@@ -1,20 +1,22 @@
 import typescript from '@rollup/plugin-typescript';
 
+const dist = 'disto';
+
 export default {
   input: 'src/index.ts',
   output: [
     {
       format: 'umd',
       name: 'showFrameModal',
-      file: 'dist/bundle.umd.js',
+      file: `${dist}/bundle.umd.js`,
     },
     {
       format: 'es',
-      file: 'dist/bundle.es.js',
+      file: `${dist}/bundle.es.js`,
     },
     {
       format: 'cjs',
-      file: 'dist/bundle.cjs.js',
+      file: `${dist}/bundle.cjs.js`,
     },
   ],
   plugins: [typescript()],
