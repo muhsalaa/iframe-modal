@@ -16,7 +16,7 @@ function hideFrame(e: MessageEvent) {
   if (e.data === 'hide') {
     const someIframe = window.parent.document.getElementById(IFRAME_ID)!;
     someIframe.parentNode!.removeChild(someIframe);
-    window.removeEventListener('message', hideFrame);
+    window.removeEventListener('messages', hideFrame);
   }
 }
 
