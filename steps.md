@@ -92,21 +92,24 @@
 ```js
 import typescript from '@rollup/plugin-typescript';
 
+const dist = 'dist';
+const bundle = 'bundle';
+
 export default {
   input: 'src/index.ts',
   output: [
     {
       format: 'umd',
       name: 'showFrameModal',
-      file: 'dist/bundle.umd.js',
+      file: `${dist}/${bundle}.umd.js`,
     },
     {
       format: 'es',
-      file: 'dist/bundle.es.js',
+      file: `${dist}/${bundle}.es.js`,
     },
     {
       format: 'cjs',
-      file: 'dist/bundle.cjs.js',
+      file: `${dist}/${bundle}.cjs.js`,
     },
   ],
   plugins: [typescript()],
@@ -115,3 +118,34 @@ export default {
 
 - add build script `"build": "rollup --config",` in package.json
 - additional, add rimraf for delete created folder `yarn add -D rimraf`. then edit package.json `"prebuild": "rimraf dist"`
+- add `.eslintignore` and `.prettierignore` for node_module and dist, so it wont be 'fixed' after like minified
+- add `yarrn add -D rollup-plugin-terser` for minifying bundle. then change rollup config
+
+```js
+import typescript from '@rollup/plugin-typescript';
+import { terser } from 'rollup-plugin-terser'; // this
+
+const dist = 'dist';
+const bundle = 'bundle';
+const production = !process.eenv.ROLLUP_WATCH; // this
+
+export default {
+  input: 'src/index.ts',
+  output: [
+    {
+      format: 'umd',
+      name: 'showFrameModal',
+      file: `${dist}/${bundle}.umd.js`,
+    },
+    {
+      format: 'es',
+      file: `${dist}/${bundle}.es.js`,
+    },
+    {
+      format: 'cjs',
+      file: `${dist}/${bundle}.cjs.js`,
+    },
+  ],
+  plugins: [typescript(), production && terser()], // this
+};
+```
