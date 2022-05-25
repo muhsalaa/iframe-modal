@@ -15,7 +15,7 @@ export default {
     },
     {
       format: 'es',
-      file: `${dist}/${bundle}.es.js`,
+      file: `${dist}/${bundle}.esm.js`,
     },
     {
       format: 'cjs',

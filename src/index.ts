@@ -20,14 +20,13 @@ function hideFrame(e: MessageEvent) {
   }
 }
 
-window.addEventListener('message', hideFrame);
-
 function showFrameModal(siteUrl: string) {
   const exist = document.getElementById(IFRAME_ID);
   if (exist) return;
 
   const iframe = createIframe(siteUrl);
   document.body.append(iframe);
+  window.addEventListener('message', hideFrame);
 }
 
 export default showFrameModal;

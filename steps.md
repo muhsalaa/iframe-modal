@@ -149,3 +149,30 @@ export default {
   plugins: [typescript(), production && terser()], // this
 };
 ```
+
+## 8. creating examples
+
+### CDN
+
+- `yarn link` in root the `yarn link "iframe-modal"` at examples/cdn
+- install dependencies `yarn add iframe-modal`
+- create index.html, add tailwind, create button to showFrame
+- create display.html contain page to be used inside iframe
+- test it
+
+### CRA
+
+- install CRA
+- `yarn link "iframe-modal"`
+- `yarn add iframe-modal react-router-dom`
+- add tailwind CRA to `public/index.html`
+- create App.js and Display.js
+- Setup router and test the app
+
+### (SSR)
+
+- create folder `examples/ssr` run `npm init -y` then install dependencies `react react-dom express`
+- install our local module by its absolute path (get with pwd) `yarn add /Users/flp-9-muhammadsalma/os/iframe-modal`
+- add symlink, do `yarn link` in the root and `yarn link "iframe-modal"` at examples/ssr
+- change package.json main to `"main": "dist/bundle.cjs.js"`
+- add `"private": "true"` to examples pacakge json

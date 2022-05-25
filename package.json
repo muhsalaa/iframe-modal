@@ -2,7 +2,9 @@
   "name": "iframe-modal",
   "version": "1.0.0",
   "description": "A simple module to show iframe modal in your website",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "browser": "dist/bundle.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.ts",

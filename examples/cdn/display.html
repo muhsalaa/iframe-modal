@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="h-screen w-screen flex justify-center items-start bg-black bg-opacity-75"
+    >
+      <button
+        onclick="window.parent.postMessage('hide', '*')"
+        class="p-4 bg-blue-400 hover:bg-blue-500 text-white rounded-lg mt-20"
+      >
+        Hide Iframe
+      </button>
+    </div>
+  </body>
+</html>
