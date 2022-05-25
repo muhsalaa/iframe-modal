@@ -169,10 +169,17 @@ export default {
 - create App.js and Display.js
 - Setup router and test the app
 
-### (SSR)
+### (SSR) not yet
 
 - create folder `examples/ssr` run `npm init -y` then install dependencies `react react-dom express`
 - install our local module by its absolute path (get with pwd) `yarn add /Users/flp-9-muhammadsalma/os/iframe-modal`
 - add symlink, do `yarn link` in the root and `yarn link "iframe-modal"` at examples/ssr
 - change package.json main to `"main": "dist/bundle.cjs.js"`
 - add `"private": "true"` to examples pacakge json
+
+## 9. publish to npm
+
+- create npm account
+- add `.npmignore`
+- add `"files": ["dist"]` to example specify a folder to publish
+- add `"prepublish": "yarn build"` to run before publish

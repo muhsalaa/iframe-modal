@@ -5,13 +5,17 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.ts",
     "lint:fix": "lint-staged",
     "prepare": "husky install",
     "build": "rollup --config",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "prepublish": "yarn build"
   },
   "lint-staged": {
     "*.ts": [
