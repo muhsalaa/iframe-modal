@@ -183,3 +183,7 @@ export default {
 - add `.npmignore`
 - add `"files": ["dist"]` to example specify a folder to publish
 - add `"prepublish": "yarn build"` to run before publish
+
+## 10. refactor demo to use modal from npm
+
+## FINISH yey

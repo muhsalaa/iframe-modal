@@ -4788,8 +4788,10 @@ identity-obj-proxy@^3.0.0:
   dependencies:
     harmony-reflect "^1.4.6"
 
-"iframe-modal@file:../..":
+iframe-modal@^1.0.0:
   version "1.0.0"
+  resolved "https://registry.yarnpkg.com/iframe-modal/-/iframe-modal-1.0.0.tgz#54986cd24de42aca4861ea890e16c4ee50daa9b7"
+  integrity sha512-ktDd1zsSgYLnVQkLOeElWz2ZugbEU3wQ0qX7qTEqsPD1BTBHpp/ZBjFpnUuuqXhyswm0u0gk0l1vyaUuEPoWtg==
 
 ignore@^5.2.0:
   version "5.2.0"
