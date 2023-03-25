@@ -1,6 +1,6 @@
 {
   "name": "iframe-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple module to show iframe modal in your website",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
